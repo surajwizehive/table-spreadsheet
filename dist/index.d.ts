@@ -607,7 +607,7 @@ declare namespace jspreadsheet {
       colIndex: string | null,
       rowIndex: string | null,
       event: PointerEvent
-    ) => object[];
+    ) => object[] | null;
 
     /**
      * If true, copy and export will bring formula results. If false, it will bring formulas.
@@ -1938,13 +1938,23 @@ declare namespace jspreadsheet {
     /**
      * Hide row count column.
      */
-    hideIndex: () => void;
+    hideRowHeaders: () => void;
 
     /**
      * Hide Row.
      * @param rowNumber - Row index.
      */
     hideRow: (rowNumber: number) => void;
+
+    /**
+    * Hide Headers
+    */
+    hideColumnHeaders: () => void;
+
+    /**
+    * Show Headers
+    */
+    showColumnHeaders: () => void;    
 
     /**
      * List of highlighted cells.
@@ -2164,7 +2174,7 @@ declare namespace jspreadsheet {
      * @param str - Data.
      * @param delimiter - CSV delimiter. Defaut: ",".
      */
-    parseCSV: (str: number, delimiter?: number) => string[][];
+    parseCSV: (str: string, delimiter?: number) => string[][];
 
     /**
      * Extract a number from a string.
@@ -2557,7 +2567,7 @@ declare namespace jspreadsheet {
     /**
      * Show row count column.
      */
-    showIndex: () => void;
+    showRowHeaders: () => void;
 
     /**
      * Show hidden row.

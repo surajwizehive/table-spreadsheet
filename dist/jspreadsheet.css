@@ -698,6 +698,10 @@
     display:none;
 }
 
+.jexcel_hidden_header > thead
+{
+    display: none;
+}
 
 
 .jexcel .jrating {

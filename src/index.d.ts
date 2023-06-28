@@ -1938,13 +1938,23 @@ declare namespace jspreadsheet {
     /**
      * Hide row count column.
      */
-    hideIndex: () => void;
+    hideRowHeaders: () => void;
 
     /**
      * Hide Row.
      * @param rowNumber - Row index.
      */
     hideRow: (rowNumber: number) => void;
+
+    /**
+    * Hide Headers
+    */
+    hideColumnHeaders: () => void;
+
+    /**
+    * Show Headers
+    */
+    showColumnHeaders: () => void;    
 
     /**
      * List of highlighted cells.
@@ -2557,7 +2567,7 @@ declare namespace jspreadsheet {
     /**
      * Show row count column.
      */
-    showIndex: () => void;
+    showRowHeaders: () => void;
 
     /**
      * Show hidden row.

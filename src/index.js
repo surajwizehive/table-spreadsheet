@@ -5071,15 +5071,23 @@ if (! formula && typeof(require) === 'function') {
         /**
          * Show index column
          */
-        obj.showIndex = function() {
+        obj.showRowHeaders = function() {
             obj.table.classList.remove('jexcel_hidden_index');
         }
 
         /**
          * Hide index column
          */
-        obj.hideIndex = function() {
+        obj.hideRowHeaders = function() {
             obj.table.classList.add('jexcel_hidden_index');
+        }
+
+        obj.hideColumnHeaders = function() {
+            obj.table.classList.add('jexcel_hidden_header');
+        }
+
+        obj.showColumnHeaders = function() {
+            obj.table.classList.remove('jexcel_hidden_header');
         }
 
         /**
